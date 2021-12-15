@@ -1,0 +1,10 @@
+---
+- hosts: all
+  #become: true
+  tasks:
+
+  - name: Pull docker image from docker hub
+    command: docker pull jonesthomas/test-node-image:latest
+
+  - name: Create container using the image
+    command: docker run -d  --name test-node-Container -p 5000:5000 jonesthomas/test-node-image:latest
