@@ -14,5 +14,5 @@ RUN npm install
 COPY . .
 
 # Port mapped to the docker daemon, this is the port that your app is running on:
-EXPOSE 80
+EXPOSE 3000
 CMD ["node", "index.js"]
