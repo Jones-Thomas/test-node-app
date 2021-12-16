@@ -6,14 +6,11 @@
   tasks:
   - name: Stop and remove the exists container
     command: docker stop test-node-Container && docker rm test-node-Container
-    ignore_error: true
-    
+    ignore_erros: yes  
   - name: Remove the old Image
     command: docker rmi jonesthomas/test-node-image:latest
-    ignore_error: true
-    
+    ignore_erros: yes
   - name: Pull docker image from docker hub
     command: docker pull jonesthomas/test-node-image:latest
-
   - name: Create container using the image
     command: docker run -d  --name test-node-Container -p 80:80 jonesthomas/test-node-image:latest
