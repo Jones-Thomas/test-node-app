@@ -1,6 +1,8 @@
 ---
 - hosts: all
   #become: true
+  vars:
+    ansible_ssh_private_key_file: "/home/ubuntu/.ssh/ansible"
   tasks:
 
   - name: Pull docker image from docker hub
