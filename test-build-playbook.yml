@@ -14,4 +14,4 @@
   - name: Pull docker image from docker hub
     command: docker pull jonesthomas/test-node-image:latest
   - name: Create container using the image
-    command: docker run -d  --name test-node-Container -p 80:80 jonesthomas/test-node-image:latest
+    command: docker run -d  --name test-node-Container -p 3000:3000 jonesthomas/test-node-image:latest
